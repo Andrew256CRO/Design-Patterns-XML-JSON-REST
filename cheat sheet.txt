@@ -1,0 +1,37 @@
+JSON = JavaScript Object Notation
+Reprezinta practic un format de schimb de date.
+
+JSON e construit pe doua structuri:
+1) O colectie de name/value pairs; (object, struct, hash map)
+2) O lista ordonata de valori; (array, vector, list, sequence)
+Astea sunt structuri de date universale.
+
+In JSON, iau urmatoarea forma:
+
+Obiectul:
+-un set neordonat de name/value pairs. Un obiect incepe cu '{' si se termina cu '}'. Fiecare nume e urmat de ':' si de name/value pairs separate prin ','.
+Ex:
+{
+    "age": 21,
+    "name": "Andrei"
+}
+
+Un array:
+-este o colectie ordonata de valori. Un array incepe cu '[' si se termina cu ']'. Valorile sunt separate prin ','.
+Ex:
+[
+    23,
+    "weubhwu",
+    false,
+    true,
+    45.89
+]
+
+O valoare:
+- poate fi un string intre ghilimele "", ori un numar, ori true, ori false, ori null, ori un obiect sau un array. Aceste structuri pot fi nested(una in alta).
+
+Un string:
+-e o secventa de zero sau mai multe caractere Unicode, infasurate in "". Precum in Java.
+
+
+LINK VALIDATOR JSON: https://jsonlint.com/

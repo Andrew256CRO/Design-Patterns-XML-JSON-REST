@@ -1,0 +1,42 @@
+Extensible Markup Language (XML)
+
+
+Extensible Markup Language (XML) este un limbaj de marcare utilizat pentru a defini reguli de formatare a datelor într-un mod structurat și ușor de interpretat de către om și mașină. A fost dezvoltat de W3C și este utilizat pe scară largă pentru schimbul de date, stocarea informațiilor și configurația sistemelor în diverse domenii ale informaticii. Iată câteva idei esențiale despre XML:
+
+1. Structura și sintaxa XML
+Tag-uri: XML folosește tag-uri pentru a delimita datele. Fiecare element XML este încapsulat într-o pereche de tag-uri de deschidere și închidere, de exemplu: <element>conținut</element>.
+Atribute: Atributele sunt utilizate pentru a adăuga informații suplimentare despre elemente, de exemplu: <element atribut="valoare">conținut</element>.
+Ierarhie: XML are o structură ierarhică, în care elementele pot conține alte elemente, formând o structură de tip arbore. Aceasta permite reprezentarea complexă a datelor într-o manieră ordonată.
+Declarație XML: Documentele XML încep de obicei cu o declarație care specifică versiunea XML și setul de caractere utilizat, de exemplu: <?xml version="1.0" encoding="UTF-8"?>.
+
+2. Portabilitate și standardizare
+Interoperabilitate: XML este independent de platformă și limbaj, ceea ce îl face ideal pentru schimbul de date între sisteme diferite.
+Validare: XML poate fi validat folosind DTD (Document Type Definition) sau XML Schema, asigurându-se că documentele respectă o structură predefinită.
+
+3. Utilizări comune ale XML
+Schimbul de date: XML este folosit pe scară largă pentru a transfera date între aplicații, inclusiv în web services (SOAP), fișiere de configurare și alte formate de date interschimbabile.
+Configurarea aplicațiilor: Multe aplicații și servere utilizează XML pentru fișierele de configurare, datorită clarității și ușurinței cu care pot fi editate.
+Stocarea documentelor: XML poate fi folosit pentru a stoca documente cu structură complexă, cum ar fi cărți, articole sau rapoarte, unde organizarea și ierarhizarea datelor sunt esențiale.
+
+4. Avantajele XML
+Flexibilitate: XML permite crearea de formate de date personalizate, adaptate nevoilor specifice ale aplicațiilor.
+Ușor de înțeles și editat: Fiind un format text simplu, XML este ușor de citit, înțeles și modificat atât de oameni, cât și de mașini.
+Suport larg: XML este suportat pe scară largă de numeroase tehnologii, limbaje de programare și instrumente, ceea ce îl face foarte versatil.
+
+5. Dezavantajele XML
+Verbosit: XML poate fi foarte detaliat și voluminos, ceea ce poate duce la fișiere mari și la consum ridicat de resurse în timpul procesării.
+Performanță: În comparație cu alte formate de date, cum ar fi JSON, XML poate fi mai lent de procesat, în special pentru aplicațiile web moderne.
+Complexitate în validare: Definirea și menținerea schemelor XML complexe poate fi dificilă și consumatoare de timp.
+
+6. Comparație cu alte formate de date
+XML vs JSON: JSON este adesea preferat în dezvoltarea de aplicații web moderne datorită structurii sale mai simple și dimensiunilor mai mici, dar XML rămâne util în contexte unde structurile de date complexe și validarea strictă sunt necesare.
+XML vs YAML: YAML este mai concis și mai prietenos pentru oameni decât XML, fiind utilizat pentru fișiere de configurare și date serializate. Cu toate acestea, XML este mai robust pentru validare și definirea schemelor.
+
+7. Extensibilitate și personalizare
+Namespaces: XML suportă namespaces, care permit utilizarea mai multor vocabulari XML într-un singur document, evitând conflictele de nume.
+Transformări cu XSLT: XML poate fi transformat într-un alt format, cum ar fi HTML sau text simplu, utilizând XSLT (Extensible Stylesheet Language Transformations), oferind o flexibilitate mare în prezentarea datelor.
+
+8. XML în arhitecturile moderne
+Web services: XML este un element central în tehnologiile de servicii web bazate pe SOAP, unde se folosește pentru structura mesajelor transmise între client și server.
+APIs și microservicii: Deși JSON este mai popular pentru API-uri REST, XML este încă utilizat în multe sisteme legacy și în aplicații care necesită un format mai descriptiv și validare riguroasă a datelor.
+XML continuă să fie un standard fundamental pentru structura și schimbul de date, datorită flexibilității și capacității sale de a descrie date complexe într-un mod clar și standardizat.

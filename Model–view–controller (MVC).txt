@@ -1,0 +1,31 @@
+Model–view–controller (MVC)
+
+Model–View–Controller (MVC) este un pattern de arhitectură software folosit frecvent în dezvoltarea aplicațiilor pentru a separa preocupările și a organiza codul într-un mod mai clar și mai ușor de gestionat. Iată câteva idei esențiale despre MVC:
+
+1. Componentele MVC
+Model: Reprezintă datele aplicației și logica de business. Este responsabil pentru gestionarea datelor, fie că vin dintr-o bază de date, API-uri externe sau alte surse. Modelul notifică View-ul și Controller-ul atunci când datele se schimbă.
+View: Reprezintă interfața utilizatorului și modul în care sunt prezentate datele din Model. View-ul este responsabil pentru afișarea informațiilor utilizatorului și pentru captarea inputului de la acesta.
+Controller: Actează ca un intermediar între Model și View. Controller-ul primește inputul utilizatorului, procesează acest input (poate interacționa cu Modelul pentru a obține sau modifica date) și actualizează View-ul pentru a reflecta modificările.
+
+2. Separarea responsabilităților
+MVC permite o separare clară a responsabilităților, ceea ce face codul mai ușor de înțeles, de întreținut și de testat. Modificările la nivelul datelor (Model) sau interfaței (View) pot fi realizate independent, fără a afecta celelalte componente.
+
+3. Fluxul de date și interacțiunea
+Într-un pattern MVC tipic, fluxul de date funcționează astfel: utilizatorul interacționează cu View-ul → View-ul trimite acest input Controller-ului → Controller-ul procesează inputul și interacționează cu Modelul dacă este necesar → Modelul își actualizează starea → View-ul este notificat și își actualizează interfața pentru a reflecta noile date.
+
+4. Avantajele MVC
+Reutilizarea codului: Modelul poate fi reutilizat în diferite părți ale aplicației sau chiar în alte aplicații.
+Testabilitate: Fiecare componentă poate fi testată izolat. Testarea logicii de business (Model) este de obicei independentă de View.
+Flexibilitate și scalabilitate: Aplicațiile MVC sunt mai ușor de extins sau de modificat, deoarece componentele sunt independente unele de altele.
+
+5. Dezavantajele MVC
+Complexitate inițială: Pentru proiecte mici sau simple, utilizarea pattern-ului MVC poate părea excesivă și poate adăuga complexitate.
+Trecerea datelor între componente: În implementările complexe, gestionarea fluxului de date între Model, View și Controller poate deveni complicată.
+6. Exemple de utilizare
+
+Web Development: MVC este foarte popular în dezvoltarea web, fiind folosit de framework-uri precum Ruby on Rails, Django (într-o variantă apropiată de MVC), ASP.NET MVC, etc.
+Desktop Applications: Aplicațiile desktop, precum cele dezvoltate în cadrul .NET, JavaFX sau Qt, pot folosi de asemenea MVC pentru a organiza codul și a facilita interacțiunea între logică și interfață.
+
+7. Evoluții și variații ale MVC
+Există variații ale pattern-ului MVC, cum ar fi Model-View-ViewModel (MVVM), folosit frecvent în dezvoltarea de aplicații desktop și mobile, sau Model-View-Presenter (MVP), care aduce mici modificări în felul în care Controller-ul (sau Presenter-ul) interacționează cu View-ul.
+Aceste idei subliniază fundamentele pattern-ului MVC și modul în care acesta ajută la structurarea aplicațiilor software într-un mod clar și eficient.

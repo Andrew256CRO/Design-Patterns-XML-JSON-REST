@@ -1,0 +1,39 @@
+Singleton pattern
+
+Singleton este un pattern de proiectare creational care asigură că o clasă are o singură instanță și oferă un punct de acces global la acea instanță. Este utilizat în mod obișnuit pentru a gestiona resurse partajate, configurări globale sau alte obiecte care nu ar trebui să aibă mai mult de o instanță în cadrul unei aplicații. Iată câteva idei esențiale despre Singleton pattern:
+
+1. Caracteristici principale
+Unică instanță: Singleton-ul garantează că o clasă are doar o singură instanță în timpul execuției aplicației.
+Punct de acces global: Singleton-ul oferă un punct de acces global la această instanță unică, de obicei printr-o metodă statică.
+Control asupra instanței: Instanța Singleton este creată fie la momentul inițializării clasei (Eager Initialization) fie la primul acces (Lazy Initialization).
+
+2. Implementare
+Constructor privat: Pentru a preveni crearea de noi instanțe din afara clasei, constructorul clasei Singleton este marcat ca privat.
+Metodă statică: De obicei, o metodă statică, cum ar fi getInstance(), este folosită pentru a returna instanța unică a clasei.
+Stocare statică: Instanța unică a Singleton-ului este stocată într-o variabilă statică, care este returnată de metoda statică.
+
+3. Avantajele Singleton
+Gestionarea resurselor: Singleton-ul este util pentru gestionarea resurselor partajate, cum ar fi conexiunile la baze de date, cache-urile sau configurările aplicației, evitându-se astfel instanțierea multiplă și gestionarea duplicată a acestor resurse.
+Acces global: Asigură un acces global controlat la instanță, ceea ce poate fi util în aplicațiile mari, unde aceleași date sau resurse trebuie accesate din diverse locuri.
+Control asupra instanțelor: Oferă control asupra numărului de instanțe create și poate simplifica managementul memoriei și al resurselor.
+
+4. Dezavantajele Singleton
+Dificultate în testare: Singleton-urile pot fi greu de testat, deoarece pot crea dependențe globale și state partajate care afectează izolarea testelor unitare.
+Încălcarea principiilor OOP: Singleton-ul poate încălca principiul responsabilității unice (SRP) și principiul inversării dependenței (DIP), creând dependențe greu de gestionat între clase.
+Probleme cu concurența: În contexte multithread, implementarea unui Singleton trebuie gestionată cu atenție pentru a evita problemele de concurență, cum ar fi crearea multiplă a instanței.
+
+5. Variante de implementare
+Eager Initialization: Instanța este creată la momentul inițializării clasei, chiar dacă nu este folosită. Aceasta este simplă, dar poate consuma resurse inutil.
+Lazy Initialization: Instanța este creată doar la primul acces. Aceasta este mai eficientă din punct de vedere al resurselor, dar necesită sincronizare pentru a fi sigură în contexte multithread.
+Double-Checked Locking: O abordare pentru a îmbunătăți performanța în Lazy Initialization, verificând dacă instanța este deja creată înainte și după blocarea sincronizării.
+Singleton thread-safe: Utilizează blocarea sincronizării pentru a preveni crearea de instanțe multiple în contexte multithread.
+
+6. Exemple de utilizare
+Gestionarea configurărilor: O clasă Singleton poate fi utilizată pentru a stoca și accesa configurările aplicației, asigurându-se că toate componentele folosesc aceleași setări.
+Gestionarea conexiunilor: În aplicațiile care necesită acces la baze de date sau servicii externe, Singleton-ul poate gestiona conexiunea pentru a preveni instanțierea multiplă și gestionarea resurselor.
+Logging: În multe aplicații, un Singleton este folosit pentru logging, pentru a avea un singur punct de acces la sistemul de logging și pentru a centraliza înregistrările.
+
+7. Critici și bune practici
+Evitați Singleton-ul pentru fiecare situație: Folosirea excesivă a Singleton-ului poate duce la un design rigid și greu de extins. Este important să evaluați dacă un Singleton este cu adevărat necesar.
+Dependency Injection: În loc să se acceseze Singleton-ul direct, se poate folosi injecția de dependență pentru a reduce dependențele globale și pentru a facilita testarea.
+Singleton pattern este un instrument puternic, dar trebuie folosit cu discernământ și atenție pentru a evita problemele asociate cu gestionarea dependențelor și concurența în aplicații complexe.

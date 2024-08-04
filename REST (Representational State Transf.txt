@@ -1,0 +1,54 @@
+REST (Representational State Transfer) este un stil arhitectural pentru proiectarea serviciilor web care este axat pe resurse și utilizarea standardelor HTTP. REST este popular datorită simplității și eficienței sale în facilitarea comunicării între client și server. Iată câteva idei esențiale despre REST:
+
+1. Principiile de bază ale REST
+Statelessness (Fără stare): Fiecare cerere de la client la server trebuie să conțină toate informațiile necesare pentru a înțelege și procesa cererea. Serverul nu păstrează starea clientului între cereri, ceea ce face sistemul mai scalabil.
+Resurse: În REST, resursele sunt identificate prin URI-uri (Uniform Resource Identifiers). Acestea pot reprezenta orice obiecte, date sau servicii care pot fi manipulate.
+Metode HTTP: REST utilizează metodele standard HTTP pentru a efectua operațiuni asupra resurselor:
+GET: Recuperează o resursă.
+POST: Creează o nouă resursă.
+PUT: Actualizează o resursă existentă.
+DELETE: Șterge o resursă.
+Reprezentări: Resursele pot fi reprezentate în diverse formate (de exemplu, JSON, XML, HTML), iar aceste reprezentări sunt transferate între client și server.
+
+2. URI-uri semnificative
+Nomenclatura resurselor: URI-urile ar trebui să fie semnificative și să descrie clar resursele pe care le reprezintă, de exemplu, /users/123 pentru a accesa utilizatorul cu ID-ul 123.
+Nesting și ierarhie: Structura URI-urilor ar trebui să reflecte ierarhia resurselor și relațiile dintre ele, ceea ce face API-ul mai intuitiv.
+
+3. Statelessness și cacheabilitate
+Scalabilitate: Faptul că serverul nu stochează starea între cereri face ca REST să fie foarte scalabil, deoarece fiecare cerere este independentă și completă.
+Cache: Răspunsurile pot fi cache-ate pentru a îmbunătăți performanța, reducând astfel numărul de cereri repetate către server.
+
+4. Separarea client-server
+Independență: REST promovează separarea între client și server, ceea ce permite dezvoltarea și evoluția independentă a fiecărei părți. Clientul și serverul comunică printr-o interfață standardizată, de obicei HTTP.
+
+5. Comunicare uniformă
+Interfață unificată: REST utilizează o interfață uniformă și bine definită pentru toate operațiunile, ceea ce simplifică interacțiunea dintre sisteme diferite.
+Conținut negociabil: Serverul poate returna resursele în diferite formate (de exemplu, JSON, XML) în funcție de cererea clientului, folosind antetele HTTP, cum ar fi Accept.
+
+6. Scalabilitate și performanță
+Optimizare: Prin utilizarea cererilor independente și cache-ului, REST poate oferi performanță și scalabilitate, ceea ce îl face potrivit pentru aplicații mari și distribuite.
+Statelessness: Prin eliminarea dependenței de starea sesiunii între client și server, REST reduce complexitatea și îmbunătățește capacitatea de răspuns a serverului.
+
+7. Securitate
+Autentificare și autorizare: Deși REST nu definește în mod specific mecanisme de securitate, este obișnuită utilizarea token-urilor (JWT), OAuth sau API keys pentru autentificare și autorizare.
+Protecția datelor: Folosirea HTTPS este esențială pentru a proteja datele transferate între client și server.
+
+8. Avantajele REST
+Simplitate și ușurință în utilizare: REST este ușor de înțeles și implementat, datorită utilizării convențiilor HTTP standard.
+Flexibilitate: REST permite utilizarea diferitelor formate de date și este agnostic față de tehnologiile folosite de client și server.
+Interoperabilitate: REST este independent de limbajul de programare și platforma utilizată, ceea ce facilitează comunicarea între sisteme diferite.
+
+9. Dezavantajele REST
+Limitări la operațiuni complexe: Pentru operațiuni complexe care implică multiple resurse sau interacțiuni tranzacționale, REST poate deveni dificil de gestionat.
+Overhead-ul HTTP: În contextul aplicațiilor cu latență scăzută, overhead-ul generat de protocoalele HTTP și formatele text (de exemplu, JSON) poate fi o problemă.
+Statelessness limitativ: Faptul că REST este fără stare poate necesita soluții suplimentare pentru gestionarea sesiunilor și a contextului de utilizare.
+
+10. Comparație cu alte arhitecturi
+REST vs SOAP: Spre deosebire de SOAP, care este un protocol rigid și mai complex, REST este un stil arhitectural mai flexibil, ușor de înțeles și mai ușor de implementat.
+REST vs GraphQL: GraphQL permite solicitarea de date specifice și agregarea acestora într-o singură cerere, oferind mai multă flexibilitate decât REST, dar și cu costul unei complexități mai mari.
+
+11. Utilizări comune ale REST
+APIs pentru servicii web: REST este utilizat pe scară largă pentru a construi API-uri web care permit comunicarea între client și server.
+Integrare între aplicații: REST este adesea folosit pentru integrarea aplicațiilor de la terți sau pentru conectarea componentelor distribuite într-o arhitectură microservicii.
+Servicii mobile și web: REST este ideal pentru dezvoltarea de servicii pentru aplicații mobile și web, datorită simplității și scalabilității sale.
+REST este un stil arhitectural versatil și popular pentru crearea de API-uri, datorită simplității, scalabilității și utilizării eficiente a resurselor HTTP. Acesta continuă să fie o alegere principală pentru dezvoltarea serviciilor web moderne.

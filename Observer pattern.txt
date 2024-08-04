@@ -1,0 +1,41 @@
+Observer pattern
+
+
+Observer este un pattern de proiectare comportamental care definește o relație de tipul "unu-la-mulți" între obiecte, astfel încât atunci când un obiect (subiectul) își schimbă starea, toate obiectele dependente (observatorii) sunt notificate și actualizate automat. Este util în situațiile în care mai multe părți ale unei aplicații trebuie să reacționeze la schimbări în starea unui obiect fără a crea dependențe strânse între acestea. Iată câteva idei esențiale despre Observer pattern:
+
+1. Componentele Observer Pattern
+Subiect (Subject): Este obiectul care deține starea de care sunt interesați observatorii. Subiectul gestionează lista de observatori și are metode pentru a adăuga, elimina și notifica aceștia despre schimbările de stare.
+Observator (Observer): Este un obiect care dorește să fie notificat atunci când subiectul își schimbă starea. Fiecare observator implementează o metodă de actualizare care este apelată de subiect atunci când apare o schimbare.
+Eveniment: Este schimbarea de stare sau acțiunea în subiect care declanșează notificările către observatori.
+
+2. Fluxul de date și notificările
+Când subiectul își schimbă starea, acesta notifică toți observatorii înregistrați apelând metoda lor de actualizare. Observatorii reacționează apoi în funcție de noua stare a subiectului, ceea ce poate implica actualizarea unei interfețe grafice, declanșarea unei acțiuni sau alte operații.
+
+3. Avantajele Observer Pattern
+Decuplare: Permite o decuplare a subiectului de observatori, permițând schimbarea lor independent fără a modifica codul celorlalte componente.
+Extensibilitate: Noi observatori pot fi adăugați cu ușurință fără a modifica subiectul. Aceasta face ca aplicațiile să fie mai flexibile și extensibile.
+Reacție automată: Observer pattern permite sistemelor să reacționeze automat la evenimente sau schimbări de stare, ceea ce poate îmbunătăți dinamica și interactivitatea unei aplicații.
+
+4. Dezavantajele Observer Pattern
+Complexitate crescută: Într-un sistem cu mulți observatori, poate fi dificil de urmărit cine este notificat și în ce ordine, ceea ce poate complica debug-ul și întreținerea.
+Probleme de performanță: Dacă subiectul are mulți observatori sau notificările sunt frecvente, acest lucru poate afecta performanța aplicației.
+Riscul de scurgeri de memorie: Dacă observatorii nu sunt eliminați corect din lista subiectului atunci când nu mai sunt necesari, acest lucru poate duce la scurgeri de memorie.
+
+5. Exemple de utilizare
+Sisteme de notificare: Observer pattern este utilizat în sistemele de notificare, unde diferite componente sau module trebuie să fie informate despre anumite evenimente sau schimbări de stare.
+Interfețe grafice: În dezvoltarea de interfețe grafice, pattern-ul este folosit pentru a actualiza automat vizualizările (View) în funcție de schimbările din date (Model), fiind astfel implementat în pattern-urile arhitecturale precum Model-View-Controller (MVC).
+Evenimente și sisteme de callback: Observer este de asemenea utilizat în sisteme de evenimente și callback-uri, unde diverse componente ascultă și reacționează la acțiuni specifice.
+
+6. Variante și extensii ale Observer Pattern
+Push vs Pull: În varianta "push", subiectul trimite datele relevante direct observatorilor. În varianta "pull", subiectul doar notifică observatorii de o schimbare, iar aceștia decid dacă și ce date să ceară de la subiect.
+Event Listener: În multe medii de dezvoltare, Observer pattern este implementat prin mecanisme de ascultători de evenimente (event listeners), folosit în interfețe grafice sau sisteme de evenimente.
+Broadcast: Uneori, notificările sunt trimise către un set larg de observatori, fără să știe cineva precis cine primește notificarea. Acest model se folosește frecvent în sistemele de publish-subscribe.
+
+7. Comparație cu alte pattern-uri
+Observer vs Mediator: În timp ce Observer pattern decuplează subiectul de observatorii săi prin notificări directe, Mediator pattern centralizează comunicarea între obiecte, decuplând complet obiectele între ele.
+Observer vs Event-driven Architecture: Deși au concepte similare, arhitecturile orientate pe evenimente sunt mai complexe și sunt folosite la o scară mai mare, implicând adesea sisteme distribuite.
+
+8. Considerații privind utilizarea
+Managementul dependențelor: Trebuie să se acorde atenție la gestionarea dependențelor între subiect și observatori pentru a evita dependențele circulare sau ambiguitățile.
+Sincronizare: În contexte multithread, notificările pot necesita sincronizare pentru a preveni condițiile de cursă și alte probleme de concurență.
+Observer pattern este un instrument puternic și versatil, ideal pentru situațiile în care modificările într-un obiect trebuie să fie reflectate în mod automat în mai multe alte obiecte, fără a crea o legătură strânsă între ele.

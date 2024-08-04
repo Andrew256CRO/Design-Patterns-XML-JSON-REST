@@ -1,0 +1,46 @@
+Factory method pattern
+
+
+Factory Method este un pattern de proiectare creational care definește o interfață pentru crearea de obiecte, dar permite subclasele să modifice tipul de obiecte pe care le creează. Acest pattern promovează utilizarea polimorfismului și separă logica de creare a obiectelor de utilizarea lor, ceea ce face codul mai flexibil și mai ușor de extins. Iată câteva idei esențiale despre Factory Method pattern:
+
+1. Conceptul de bază
+Abstractizarea creării obiectelor: Factory Method separă procesul de creare a obiectelor de codul care le utilizează, permițând schimbarea tipului de obiect creat fără a modifica codul client.
+Metodă factory: O metodă abstractă sau virtuală definită în clasa de bază (sau într-o interfață) pe care subclasele o implementează pentru a crea și returna instanțe ale obiectelor.
+
+2. Componentele Factory Method
+Produs (Product): Interfața sau clasa abstractă care definește tipul de obiecte care vor fi create de metoda factory.
+Creator: Clasa care declară metoda factory, aceasta poate fi abstractă sau poate avea o implementare implicită.
+Concrete Product: Clasele concrete care implementează interfața Produsului. Acestea reprezintă obiectele specifice create de metoda factory.
+Concrete Creator: Subclasele care implementează metoda factory pentru a crea instanțe ale tipurilor specifice de Concrete Product.
+
+3. Avantajele Factory Method
+Extensibilitate: Permite extinderea ușoară a codului prin adăugarea de noi produse fără a modifica codul existent, adăugând doar noi implementări ale metodei factory.
+Decuplarea: Separă codul care folosește obiecte de codul care le creează, reducând astfel dependențele și îmbunătățind modularitatea.
+Control asupra instanțierii: Oferă control asupra procesului de creare a obiectelor, permițând, de exemplu, optimizarea sau personalizarea acestui proces.
+
+4. Dezavantajele Factory Method
+Complexitate crescută: Poate adăuga complexitate suplimentară codului, mai ales atunci când numărul de subclase Concrete Creator crește.
+Multitudine de clase: Dacă există multe tipuri de produse, acest lucru poate duce la o proliferare a claselor, complicând arhitectura aplicației.
+
+5. Exemple de utilizare
+Sisteme de interfață grafică: În aplicațiile de UI, Factory Method este utilizat pentru a crea elemente grafice, cum ar fi butoane sau ferestre, care pot varia în funcție de platformă sau stil.
+Framework-uri și biblioteci: Multe framework-uri folosesc Factory Method pentru a permite extensii și personalizări, permițând utilizatorilor să creeze componente personalizate fără a modifica codul de bază.
+Sisteme de logare: Un alt exemplu comun este crearea de loggeri diferiți (de ex., fișiere, baze de date, console) utilizând Factory Method pentru a decide dinamica tipului de logger necesar.
+
+6. Comparație cu alte pattern-uri creationale
+Factory Method vs Abstract Factory: Abstract Factory este un pattern mai complex care creează familii de obiecte relaționate, pe când Factory Method se concentrează pe crearea unui singur tip de produs.
+Factory Method vs Simple Factory: Simple Factory, deși nu este un pattern oficial GoF, oferă o metodă statică pentru crearea de obiecte, dar nu permite extensibilitatea polimorfă pe care o oferă Factory Method.
+Factory Method vs Builder: Builder este utilizat pentru a crea obiecte pas cu pas, în special când obiectul este complex și necesită o construcție graduală, pe când Factory Method este folosit pentru a crea obiecte printr-o metodă singulară.
+
+7. Variante și extensii ale Factory Method
+Singleton Factory Method: Uneori, metoda factory poate fi combinată cu pattern-ul Singleton pentru a se asigura că toate produsele create sunt instanțe unice.
+Factory Method și Prototype: Factory Method poate fi folosit împreună cu Prototype pattern pentru a crea noi obiecte pe baza unei instanțe prototip existente.
+
+8. Considerații privind utilizarea
+Simplificarea testării: Factory Method permite injectarea de mock-uri sau stubs pentru a facilita testarea unităților, deoarece dependențele sunt create printr-o metodă controlată.
+Configurabilitate: Permite configurarea dinamică a produselor create, de exemplu, alegerea unui tip de conexiune la o bază de date în funcție de parametrii configurați.
+
+9. Implementare practică
+Clasă abstractă sau interfață: Definirea unei clase abstracte sau interfețe pentru Produs și pentru Creator.
+Metoda factory: Implementarea metodei factory în subclasele Creator pentru a crea și returna obiecte Concrete Product.
+Factory Method pattern este esențial pentru arhitecturile care necesită o mare flexibilitate și extensibilitate în crearea de obiecte, promovând un design curat și bine organizat, facilitând totodată adăugarea de noi funcționalități cu un minim impact asupra codului existent.
